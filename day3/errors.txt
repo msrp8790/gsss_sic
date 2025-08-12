@@ -1,0 +1,4 @@
+1. SyntaxError : when the syntax is wrong.
+2. NameError : when the name is not defined.
+3. IndexError : when the asked index value is not defined.
+4. ValueError : when we are trying to cast some values into other and when it is           not possible.

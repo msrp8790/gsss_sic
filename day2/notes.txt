@@ -112,4 +112,33 @@ Outcome: I/P we know , O/P we know.
 2. Find the solution. Forget programming. Find the solution using any specific technique or using some formula or trial and error method.
 Outcome: We know the solution.
 
-3. 
+3. Write the Algorithm. Step by step procedure. Each step must be simple, unambigious and finite.
+
+4. Write the Fake-code (Pseucode)
+
+5. Code it!
+
+6. Unit testing, Cyxclomatic complexity (to find number of paths in the logic), optimize the logic.
+
+i/p: non negative number. 
+math.sqrt we need to use
+o/p: print PS or Not
+
+45      6.8     6   36
+144     12.0    12  144
+
+Read a non-ve number, say N
+find root of N, say ROOT
+convert ROOT to integer
+check if ROOT * ROOT is N
+if yes, print N is Perfect Square
+else, print N is not a P S
+
+N = input()
+ROOT = square_root(N)
+ROOT = integer(ROOT)
+if ROOT * ROOT is equal to N, then
+    print N is a P S
+else
+    print N is not a P S
+---------------------------------------------------
