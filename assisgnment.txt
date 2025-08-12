@@ -16,3 +16,4 @@ Problems on loops:
 3. Find 2nd smallest digit in the number.
 4. Find 2nd biggest digit and also check if 2nd biggest digit is not possible to be found.
 5. Find sum of composite digits of the number.  
+modules: OS , SYS, 
