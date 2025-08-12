@@ -1,0 +1,18 @@
+1. Floating point numbers are stored using IEEE standards.
+2. most used 2 relational operator.
+assisgnment operator has right to left assosivity.(notes)
+DAY1
+3. find TAX calculation problem, farmer problem.(this is based on conditional problem)
+* student result problem
+* check if a year is leap year, check if a number is perfect square.
+DAY2
+Problems on loops:
+* implement range function.
+* Accept the number of lines of the shape and draw the following shapes:
+ X shape, Hollow square, X inside hollow square, Pascal Triangle, Rhombus
+* Accept a number and implement following programs:
+1. find sum of Even placed digit
+2. Find sum of Odd placed Even digits in the number
+3. Find 2nd smallest digit in the number.
+4. Find 2nd biggest digit and also check if 2nd biggest digit is not possible to be found.
+5. Find sum of composite digits of the number.  
