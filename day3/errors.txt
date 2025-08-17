@@ -2,3 +2,6 @@
 2. NameError : when the name is not defined.
 3. IndexError : when the asked index value is not defined.
 4. ValueError : when we are trying to cast some values into other and when it is           not possible.
+5. TypeError : range expected at least 1 or more or atmost 3 arguments.
+6. ZeroDivisionError : when the integer is not divided by zero or dividing a number by zero .
+PVM = Python Virtual Machine.

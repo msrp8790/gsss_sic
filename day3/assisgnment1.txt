@@ -1,0 +1,204 @@
+1.Which of the following are characteristics of recursive function? (choose two correct options)
+*
+1/1
+Always faster than loops
+Can be converted into iteration always
+May cause stack overflow if base condition is missing
+ 
+Must have a base condition
+--------------------------------------------------------------------------------- 
+ 
+2.Which of the following statements about function parameters in Python are true? (choose three correct options)
+*
+1/1
+Functions can accept a variable number of arguments.
+ 
+Default parameters must come before non-default parameters.
+ 
+none of the given options
+Python supports both positional and Named arguments.
+ ------------------------------------------------------------------------------
+ 
+3.What is the primary purpose of a function in Python? (choose two correct options)
+*
+0/1
+To organize code into reusable blocks
+ 
+To store data permanently
+To handle exceptions
+ 
+To implement procedural programming
+Correct answer
+To implement procedural programming
+To organize code into reusable blocks
+ ----------------------------------------------------------------------------------
+
+3.Which of the following statements about function are true?
+*
+1/1
+Functions can accept any number of arguments.
+A function may return the result or acknowledgement or may wish to return nothing.
+all of the given options
+ 
+Arguments may take default values to avoid function overloading.
+The function is good if it solves one problem.
+------------------------------------------------------------------------------------
+
+4.Which of the following are TRUE about Python classes and objects? (choose two correct options)
+*
+1/1
+Objects are instances of classes
+ 
+You cannot access class variables in instance methods
+Class variables are shared by all instances
+ 
+You can dynamically add attributes to an object in methods other than __new__ and __init__
+ -----------------------------------------------------------------------------------------
+
+5.Given the code below, which statements are not true?
+
+class A:
+    def greet(self):
+        return "Hello from A"
+
+class B(A):
+    def greet(self):
+        return "Hello from B"
+       
+       
+
+*
+1/1
+super().greet() can be used in B to call A's method
+Class B cannot directly access members of A in it
+ 
+Class B inherits from class A
+The method in B overrides the one in A
+ -----------------------------------------------------------------------------------------
+
+6.Choose the wrong option with respect to the below code.
+class Person:
+    species = "Human"
+    def __init__(self, name):
+        self.name = name
+*
+1/1
+species is a class variable
+Every object will have its own copy of species
+ 
+__init__ is a constructor
+name is an instance variable
+------------------------------------------------------------------------------
+
+7.Which method is called when an object is about to be destroyed or garbage-collected?
+*
+1/1
+__delete__
+__del__
+ 
+__destroy_
+__remove__
+------------------------------------------------------------------------------------
+
+8.Which of the following are true about closures in Python? (choose three correct options)
+*
+0/1
+A Closure is created when a nested function references variables from the outer function
+A Closure allow a function to remember variables from its enclosing scope
+ 
+Closures retain access to their enclosing scope even after the outer function has returned
+ 
+Closures can modify variables in their enclosing scope using global
+ 
+Correct answer
+A Closure allow a function to remember variables from its enclosing scope
+A Closure is created when a nested function references variables from the outer function
+Closures retain access to their enclosing scope even after the outer function has returned
+-------------------------------------------------------------------------------------
+
+9.Which of the following are valid use cases of closures in Python? (choose three correct options)
+*
+0/1
+Avoiding global state
+Implementing decorators
+ 
+Creating function factories
+ 
+Memory-efficient recursion
+ 
+Correct answer
+Implementing decorators
+Avoiding global state
+Creating function factories
+ -------------------------------------------------------------------------------------
+
+10.What will be the output of:
+
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)
+*
+1/1
+[4, 1, 2, 3]
+[1, 2, 3]
+[1, 2, 3, 4]
+ 
+Error
+----------------------------------------------------------------------------------
+
+11.Which statement about list slicing is true?
+*
+0/1
+a[::0] is valid and returns a list of repeated elements.
+a[1:1] returns an error.
+a[1:1] returns the element at index 1.
+ 
+a[::-1] returns a reversed list.
+Correct answer
+a[::-1] returns a reversed list.
+----------------------------------------------------------------------------------------
+
+12.What will this code output?
+
+a = ['apple', 'banana']
+b = a[:]
+b.append('cherry')
+print(len(a), len(b))
+*
+1/1
+2 3
+ 
+3 3
+Error
+2 2
+---------------------------------------------------------------------------------------
+
+13.What will be the output?
+
+with open('test.txt', 'w') as f:
+    f.write('Hello\nWorld')
+with open('test.txt', 'r') as f:
+    print(f.readline().strip())
+*
+0/1
+Error
+Hello World
+ 
+Hello
+World
+Correct answer
+Hello
+---------------------------------------------------------------------------------------
+
+14.Which statement is false for remove() method?
+*
+0/1
+It removes the first matching value.
+Raises ValueError if item not found.
+Works only for mutable sequences.
+ 
+Can remove by index directly.
+Correct answer
+Can remove by index directly.
+--------------------------------------------------------------------------------------
