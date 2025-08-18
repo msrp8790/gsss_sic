@@ -168,3 +168,7 @@ Day3
 * What if i pass the command line argument to my_range function?
 * What purpose we need the file name , and why the argv stores the value?
 * Why in python there is no implicit  type casting? 
+
+DAY4
+* How to read the input till we give any particular function in python?
+* Learn the in and out of the function 
