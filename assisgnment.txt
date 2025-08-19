@@ -172,3 +172,9 @@ Day3
 DAY4
 * How to read the input till we give any particular function in python?
 * Learn the in and out of the function 
+
+DAY 5
+* Why there is no indexError in slicing ?
+* Implement a function to find which mimics the find method of string class.
+* Why the value will be 0 when we search for empty string ?
+
