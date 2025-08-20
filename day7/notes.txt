@@ -1,0 +1,6 @@
+* In python when we try to do CRUD opertion of mysql we need to follow these 5 steps:
+  1. Establish the connection.
+  2. Get the cursor.
+  3. Run the query.
+  4. Close the cursor.
+  5. Close the connection.

@@ -5,3 +5,6 @@
 5. TypeError : range expected at least 1 or more or atmost 3 arguments.
 6. ZeroDivisionError : when the integer is not divided by zero or dividing a number by zero .
 PVM = Python Virtual Machine.
+7. RecursionError : maximum recursion depth execeded while calling a python object.
+8. pymysql.err :
+9. AttributeError :
