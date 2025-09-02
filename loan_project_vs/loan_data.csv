@@ -1,0 +1,16 @@
+ApplicationID,Name,Age,EmploymentStatus,Income,CreditScore,LoanAmount,LoanStatus
+A001,John Smith,29,Employed,45000,720,15000,Approved
+A002,Sarah Johnson,35,Self-Employed,60000,680,25000,Approved
+A003,Michael Lee,42,Employed,52000,,18000,Rejected
+A004,Emily Davis,28,Unemployed,,650,8000,Rejected
+A005,David Wilson,50,Employed,85000,710,40000,Approved
+A006,Linda Martinez,31,Employed,47000,600,25000,Rejected
+A007,James Anderson,38,Self-Employed,120000,730,60000,Approved
+A008,Mary Thomas,45,Employed,95000,710,100000,Approved
+A009,Robert Jackson,52,Retired,30000,500,20000,Rejected
+A010,Patricia White,33,Employed,48000,650,25000,Approved 
+A011,John Smith,29,Employed,45000,720,15000,approved
+A001,John Smith,29,Employed,45000,720,15000,Approved
+A012,Alex Brown,26,Employed,38000,640,,Rejected
+A013,Taylor Green,41,Self-Employed,300000,780,400000,Approved
+A014,Chris Blue,36,Employed,35000,690,90000,Approved

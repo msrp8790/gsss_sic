@@ -1,0 +1,325 @@
+
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Loan Report</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif; background:#f7f9fb; padding:24px}
+.container{max-width:1000px;margin:auto;background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+h1{margin-top:0}
+table{width:100%;border-collapse:collapse;margin-bottom:18px}
+th,td{border:1px solid #e6eaf0;padding:8px;text-align:left}
+th{background:#eef2ff}
+.small{font-size:0.9rem;color:#475569}
+</style>
+</head><body>
+<div class="container">
+<h1>Loan Data Preprocessing Report</h1>
+<p class="small">Generated: 2025-09-01 14:40:40.057922</p>
+<h3>Raw preview</h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ApplicationID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>EmploymentStatus</th>
+      <th>Income</th>
+      <th>CreditScore</th>
+      <th>LoanAmount</th>
+      <th>LoanStatus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A001</td>
+      <td>John Smith</td>
+      <td>29</td>
+      <td>Employed</td>
+      <td>45000.0</td>
+      <td>720.0</td>
+      <td>15000</td>
+      <td>Approved</td>
+    </tr>
+    <tr>
+      <td>A002</td>
+      <td>Sarah Johnson</td>
+      <td>35</td>
+      <td>Self-Employed</td>
+      <td>60000.0</td>
+      <td>680.0</td>
+      <td>25000</td>
+      <td>Approved</td>
+    </tr>
+    <tr>
+      <td>A003</td>
+      <td>Michael Lee</td>
+      <td>42</td>
+      <td>Employed</td>
+      <td>52000.0</td>
+      <td>NaN</td>
+      <td>18000</td>
+      <td>Rejected</td>
+    </tr>
+    <tr>
+      <td>A004</td>
+      <td>Emily Davis</td>
+      <td>28</td>
+      <td>Unemployed</td>
+      <td>NaN</td>
+      <td>650.0</td>
+      <td>8000</td>
+      <td>Rejected</td>
+    </tr>
+    <tr>
+      <td>A005</td>
+      <td>David Wilson</td>
+      <td>50</td>
+      <td>Employed</td>
+      <td>85000.0</td>
+      <td>710.0</td>
+      <td>40000</td>
+      <td>Approved</td>
+    </tr>
+    <tr>
+      <td>A006</td>
+      <td>Linda Martinez</td>
+      <td>31</td>
+      <td>Employed</td>
+      <td>47000.0</td>
+      <td>600.0</td>
+      <td>25000</td>
+      <td>Rejected</td>
+    </tr>
+    <tr>
+      <td>A007</td>
+      <td>James Anderson</td>
+      <td>38</td>
+      <td>Self-Employed</td>
+      <td>120000.0</td>
+      <td>730.0</td>
+      <td>60000</td>
+      <td>Approved</td>
+    </tr>
+    <tr>
+      <td>A008</td>
+      <td>Mary Thomas</td>
+      <td>45</td>
+      <td>Employed</td>
+      <td>95000.0</td>
+      <td>710.0</td>
+      <td>100000</td>
+      <td>Approved</td>
+    </tr>
+    <tr>
+      <td>A009</td>
+      <td>Robert Jackson</td>
+      <td>52</td>
+      <td>Retired</td>
+      <td>30000.0</td>
+      <td>500.0</td>
+      <td>20000</td>
+      <td>Rejected</td>
+    </tr>
+    <tr>
+      <td>A010</td>
+      <td>Patricia White</td>
+      <td>33</td>
+      <td>Employed</td>
+      <td>48000.0</td>
+      <td>650.0</td>
+      <td>25000</td>
+      <td>Approved</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Cleaned preview</h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ApplicationID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>EmploymentStatus</th>
+      <th>Income</th>
+      <th>CreditScore</th>
+      <th>LoanAmount</th>
+      <th>LoanStatus</th>
+      <th>Income_is_outlier</th>
+      <th>LoanAmount_is_outlier</th>
+      <th>NeedsReview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A001</td>
+      <td>John Smith</td>
+      <td>29</td>
+      <td>Employed</td>
+      <td>45000.0</td>
+      <td>720.0</td>
+      <td>15000</td>
+      <td>Approved</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A002</td>
+      <td>Sarah Johnson</td>
+      <td>35</td>
+      <td>Self-Employed</td>
+      <td>60000.0</td>
+      <td>680.0</td>
+      <td>25000</td>
+      <td>Approved</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A003</td>
+      <td>Michael Lee</td>
+      <td>42</td>
+      <td>Employed</td>
+      <td>52000.0</td>
+      <td>667.0</td>
+      <td>18000</td>
+      <td>Rejected</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A004</td>
+      <td>Emily Davis</td>
+      <td>28</td>
+      <td>Unemployed</td>
+      <td>50000.0</td>
+      <td>650.0</td>
+      <td>8000</td>
+      <td>Rejected</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A005</td>
+      <td>David Wilson</td>
+      <td>50</td>
+      <td>Employed</td>
+      <td>85000.0</td>
+      <td>710.0</td>
+      <td>40000</td>
+      <td>Approved</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A006</td>
+      <td>Linda Martinez</td>
+      <td>31</td>
+      <td>Employed</td>
+      <td>47000.0</td>
+      <td>600.0</td>
+      <td>25000</td>
+      <td>Rejected</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A007</td>
+      <td>James Anderson</td>
+      <td>38</td>
+      <td>Self-Employed</td>
+      <td>120000.0</td>
+      <td>730.0</td>
+      <td>60000</td>
+      <td>Approved</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>A008</td>
+      <td>Mary Thomas</td>
+      <td>45</td>
+      <td>Employed</td>
+      <td>95000.0</td>
+      <td>710.0</td>
+      <td>100000</td>
+      <td>Approved</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>A009</td>
+      <td>Robert Jackson</td>
+      <td>52</td>
+      <td>Retired</td>
+      <td>30000.0</td>
+      <td>500.0</td>
+      <td>20000</td>
+      <td>Rejected</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A010</td>
+      <td>Patricia White</td>
+      <td>33</td>
+      <td>Employed</td>
+      <td>48000.0</td>
+      <td>650.0</td>
+      <td>25000</td>
+      <td>Approved</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A011</td>
+      <td>John Smith</td>
+      <td>29</td>
+      <td>Employed</td>
+      <td>45000.0</td>
+      <td>720.0</td>
+      <td>15000</td>
+      <td>Approved</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Avg Loan by Employment Status</h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>EmploymentStatus</th>
+      <th>AvgLoanAmount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Employed</td>
+      <td>34000.0</td>
+    </tr>
+    <tr>
+      <td>Retired</td>
+      <td>20000.0</td>
+    </tr>
+    <tr>
+      <td>Self-Employed</td>
+      <td>42500.0</td>
+    </tr>
+    <tr>
+      <td>Unemployed</td>
+      <td>8000.0</td>
+    </tr>
+  </tbody>
+</table>
+<p class="small">Cleaned CSV: cleaned_loan_data.csv</p>
+</div></body></html>

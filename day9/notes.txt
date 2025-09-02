@@ -1,4 +1,4 @@
-* we use while loop for shifting in sorting, and we use for loop to access the elements.
+
 Bubble Sort:
 Its trivial (simpler, easier) and traditional way of sorting technique. Such kind of technique we call as BRUTE FORCE.
 
@@ -112,4 +112,4 @@ def partition_array(my_list):
         if pivot < my_list[i]
             my_list[i], my_list[j] = my_list[j], my_list[i]
             j += 1
-    my_list[0], my_list[j] = my_list[j], my_list[0]
+my_list[0], my_list[j] = my_list[j], my_list[0]
