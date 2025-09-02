@@ -1,3 +1,4 @@
+# to run this give this command in command prompt 'streamlit run loan_app.py'
 # loan_app.py
 import streamlit as st
 import pandas as pd
